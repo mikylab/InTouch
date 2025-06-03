@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%; /* #343A40 */
+  --muted: 210 40% 95%; /* #F8F9FA */
+  --muted-foreground: 215 16% 47%; /* #6C757D */
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 210 40% 90%;
+  --input: 210 40% 90%;
+  --primary: 357 74% 70%; /* #FF6B6B coral */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 178 60% 58%; /* #4ECDC4 teal */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 52 100% 72%; /* #FFE66D yellow */
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 357 74% 70%;
+  --radius: 12px;
+  
+  /* Custom coral variants */
+  --coral: 357 74% 70%; /* #FF6B6B */
+  --coral-light: 357 74% 78%; /* #FF8E8E */
+  --coral-dark: 357 74% 62%; /* #E55555 */
+  
+  /* Custom teal variants */
+  --teal: 178 60% 58%; /* #4ECDC4 */
+  --teal-light: 178 60% 66%; /* #6DD5CE */
+  --teal-dark: 178 60% 50%; /* #3BA99F */
+  
+  /* Custom yellow */
+  --yellow: 52 100% 72%; /* #FFE66D */
+  --yellow-light: 52 100% 80%; /* #FFED8D */
+  
+  /* Custom grays */
+  --warm-gray: 210 11% 98%; /* #F8F9FA */
+  --medium-gray: 215 16% 47%; /* #6C757D */
+  --dark-gray: 222 47% 11%; /* #343A40 */
+}
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 0 0% 98%;
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20% 65%;
+  --popover: 222 47% 11%;
+  --popover-foreground: 0 0% 98%;
+  --card: 222 47% 11%;
+  --card-foreground: 0 0% 98%;
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --primary: 357 74% 70%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 178 60% 58%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 52 100% 72%;
+  --accent-foreground: 222 47% 11%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 357 74% 70%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-coral {
+    color: hsl(var(--coral));
+  }
+  
+  .text-coral-light {
+    color: hsl(var(--coral-light));
+  }
+  
+  .text-coral-dark {
+    color: hsl(var(--coral-dark));
+  }
+  
+  .bg-coral {
+    background-color: hsl(var(--coral));
+  }
+  
+  .bg-coral-light {
+    background-color: hsl(var(--coral-light));
+  }
+  
+  .bg-coral-dark {
+    background-color: hsl(var(--coral-dark));
+  }
+  
+  .text-teal {
+    color: hsl(var(--teal));
+  }
+  
+  .text-teal-light {
+    color: hsl(var(--teal-light));
+  }
+  
+  .text-teal-dark {
+    color: hsl(var(--teal-dark));
+  }
+  
+  .bg-teal {
+    background-color: hsl(var(--teal));
+  }
+  
+  .bg-teal-light {
+    background-color: hsl(var(--teal-light));
+  }
+  
+  .bg-teal-dark {
+    background-color: hsl(var(--teal-dark));
+  }
+  
+  .text-yellow {
+    color: hsl(var(--yellow));
+  }
+  
+  .bg-yellow {
+    background-color: hsl(var(--yellow));
+  }
+  
+  .text-warm-gray {
+    color: hsl(var(--warm-gray));
+  }
+  
+  .bg-warm-gray {
+    background-color: hsl(var(--warm-gray));
+  }
+  
+  .text-medium-gray {
+    color: hsl(var(--medium-gray));
+  }
+  
+  .text-dark-gray {
+    color: hsl(var(--dark-gray));
+  }
+  
+  .bg-dark-gray {
+    background-color: hsl(var(--dark-gray));
+  }
+  
+  .hover\:bg-coral:hover {
+    background-color: hsl(var(--coral));
+  }
+  
+  .hover\:bg-coral-dark:hover {
+    background-color: hsl(var(--coral-dark));
+  }
+  
+  .hover\:text-coral:hover {
+    color: hsl(var(--coral));
+  }
+  
+  .hover\:text-teal:hover {
+    color: hsl(var(--teal));
+  }
+}
